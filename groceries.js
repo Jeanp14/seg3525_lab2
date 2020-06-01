@@ -3,70 +3,70 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "brocoli  (1.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 1.99
 	},
 	{
-		name: "bread",
+		name: "bread  (2.35)",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
 		price: 2.35
 	},
 	{
-		name: "salmon",
+		name: "salmon  (10.00)",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
 		price: 10.00
 	},
 	{
-		name: "orange",
+		name: "orange  (1.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 1.99
 	},
 	{
-		name: "cereal",
+		name: "cereal  (8.49)",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
 		price: 8.49
 	},
 	{
-		name: "eggs",
+		name: "eggs  (3.99)",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
 		price: 3.99
 	},
 	{
-		name: "banana",
+		name: "banana  (1.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
 		price: 1.99
 	},
 	{
-		name: "cake",
+		name: "cake  (8.99)",
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 2.35
+		price: 8.99
 	},
 	{
-		name: "milk",
+		name: "milk  (2.49)",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
 		price: 2.49
 	},
 	{
-		name: "rice",
+		name: "rice  (8.99)",
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
@@ -82,6 +82,7 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
+		prods.sort(function(a, b){return a.price - b.price}); //sort product list by price
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
 		}

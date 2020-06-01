@@ -1,10 +1,12 @@
 /* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
 
 #signature{
+  font-style: italic;
   text-align: end;
 }
 
 h1{
+  font-style: italic;
   color: red;
 }
 
